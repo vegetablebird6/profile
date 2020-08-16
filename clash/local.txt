@@ -1,0 +1,24 @@
+[custom]
+surge_ruleset=🍤 全球直连,rules/ACL4SSR/Clash/LocalAreaNetwork.list
+surge_ruleset=🍤 全球直连,rules/ACL4SSR/Clash/UnBan.list
+surge_ruleset=🦴 广告过滤,rules/NobyDa/Surge/AdRule.list
+surge_ruleset=🦴 广告过滤,rules/DivineEngine/Surge/surge_ruleset/Guard/Hijacking.list
+surge_ruleset=🥢 节点选择,rules/ACL4SSR/Clash/Telegram.list
+surge_ruleset=🍉 国外媒体,rules/ACL4SSR/Clash/ProxyMedia.list
+surge_ruleset=🥢 节点选择,rules/ACL4SSR/Clash/ProxyGFWlist.list
+surge_ruleset=🍤 全球直连,rules/ACL4SSR/Clash/ChinaDomain.list
+surge_ruleset=🍤 全球直连,rules/ACL4SSR/Clash/ChinaCompanyIp.list
+surge_ruleset=🍤 全球直连,rules/ACL4SSR/Clash/Download.list
+surge_ruleset=🍤 全球直连,[]GEOIP,CN
+surge_ruleset=🍥 漏网之鱼,[]MATCH
+
+custom_proxy_group=🥢 节点选择`select`.*
+custom_proxy_group=🍉 国外媒体`select`[]🥢 节点选择`.*
+custom_proxy_group=🍥 漏网之鱼`select`[]🥢 节点选择`[]🍤 全球直连
+custom_proxy_group=🦴 广告过滤`select`[]REJECT`[]DIRECT
+custom_proxy_group=🍤 全球直连`select`[]DIRECT
+
+enable_rule_generator=true
+overwrite_original_rules=true
+clash_rule_base=https://raw.githubusercontent.com/vegetablebird6/profile/master/clash/simple_base.yml
+exclude_remarks=(时间|流量|官网)
